@@ -372,7 +372,7 @@
         if(a){a.document.write(`<html><head><title>Allow Popups</title><style>body{font-family:sans-serif;background:#1a0b2e;color:#fff;text-align:center;padding:40px;line-height:1.8;}.steps{background:#2d1b4e;padding:25px;border-radius:15px;display:inline-block;text-align:left;margin:20px;}.highlight{color:#ffd166;font-weight:bold;}code{background:#000;padding:4px 10px;border-radius:6px;color:#ffd166;font-size:16px;}button{background:#ff6b9d;color:#fff;border:none;padding:12px 30px;border-radius:30px;font-size:16px;cursor:pointer;margin-top:15px;}</style></head><body><h1>Allow Popups</h1><div class="steps"><p>Step 1: Copy URL:</p><p><code>chrome://settings/content/popups</code></p><p>Step 2: Open new tab (Ctrl+T)</p><p>Step 3: Paste & Enter</p><p>Step 4: Allow this site</p><p>Step 5: Come back & START</p></div><button onclick="navigator.clipboard.writeText('chrome://settings/content/popups').then(function(){}).catch(function(){})">COPY SETTINGS URL</button></body></html>`);a.document.close();}
     }
 
-    function gRounds() { try { let s=localStorage.getItem(RKEY); return s ? parseInt(s) : 3; } catch(e){ return 3; } }
+    function gRounds() { try { let s=localStorage.getItem(RKEY); return s ? parseInt(s) : 1; } catch(e){ return 1; } }
     function gLimit() { try { let s=localStorage.getItem(LKEY); if(!s) return 0; let v=parseInt(s); return (isNaN(v)||v<0) ? 0 : v; } catch(e){ return 0; } }
 
     function saveRoundSetting() {
